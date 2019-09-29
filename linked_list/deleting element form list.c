@@ -43,13 +43,13 @@ if (head->data == data){            //if the data is at the head itself
 
 else{
     while (temp != NULL){         //while remove is not null
-        temp = temp->next;      //traverse remove
-        prev = prev->next;
         if (temp->data == data){  //if remove is the data
             prev->next = temp->next;  //set the previous node to the next of remove
             free(temp);           //free remove
             break;
         }
+          temp = temp->next;      //traverse remove
+        prev = prev->next;
     }
 }
 }
